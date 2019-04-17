@@ -1,17 +1,10 @@
-(defvar prelude-dir (file-name-directory load-file-name)
-  "The root dir of the Emacs Prelude distribution.")
-
-(defvar prelude-personal-dir (expand-file-name "personal" prelude-dir)
-  "This directory is for your personal configuration.
-
-Users of Emacs Prelude are encouraged to keep their personal configuration
-changes in this directory.  All Emacs Lisp files there are loaded automatically
-by Prelude.")
+(defvar doom-private-override-dir (expand-file-name "override" doom-private-dir)
+  "This directory is for your personal configuration.")
 
 
-(when (file-exists-p prelude-personal-dir)
-  (message "Loading personal configuration files in %s..." prelude-personal-dir)
-  (mapc 'load (directory-files prelude-personal-dir 't "^[^#].*el$")))
+(when (file-exists-p doom-private-override-dir)
+  (message "Loading personal configuration files in %s..." doom-private-override-dir)
+  (mapc 'load (directory-files doom-private-override-dir 't "^[^#].*el$")))
 
 (add-to-list 'default-frame-alist '(height . 40))
 (add-to-list 'default-frame-alist '(width . 140))
