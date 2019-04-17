@@ -22,8 +22,8 @@
 
 ;(setq frame-background-mode "dark")
 ;(disable-theme 'zenburn)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(add-to-list 'load-path "~/.emacs.d/themes")
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" doom-private-dir))
+(add-to-list 'load-path (expand-file-name "themes" doom-private-dir))
 ;; Uncomment this to increase font size
 ;; (set-face-attribute 'default nil :height 140)
 ;(load-theme 'black-mustang t) ;; gvim theme
