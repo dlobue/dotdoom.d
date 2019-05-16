@@ -85,6 +85,18 @@
  (define-key notmuch-tree-mode-map [mouse-1] nil)
  (define-key notmuch-search-mode-map [mouse-1] nil)
 
+ (evil-define-key 'normal notmuch-show-mode-map "=" 'notmuch-refresh-this-buffer)
+ (evil-define-key 'normal notmuch-search-mode-map "=" 'notmuch-refresh-this-buffer)
+
+
+ ; (let ((evil-notmuch-global-mode (lambda ()
+ ;                                   (define-key evil-normal-state-local-map "m" 'notmuch-mua-new-mail)
+ ;                                   (define-key evil-normal-state-local-map "=" 'notmuch-refresh-this-buffer))))
+ ;   (add-hook 'notmuch-show-hook evil-notmuch-global-mode)
+ ;   (add-hook 'notmuch-search-hook evil-notmuch-global-mode)
+ ;   (add-hook 'notmuch-home-hook evil-notmuch-global-mode)
+ ;   (add-hook 'notmuch-tree-hook evil-notmuch-global-mode))
+
 
  ;(define-key notmuch-show-mode-map "j" 'next-line)
  ;(define-key notmuch-show-mode-map "k" 'previous-line)

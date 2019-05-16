@@ -17,3 +17,24 @@
     ("In Review" . "Resolve Issue")
     ("Resolved" . "Close Issue")
     ("Closed" . "Reopen Issue")))
+
+
+
+(setq org-jira-custom-jqls
+  '(
+    (:jql "project = REVUP AND resolution = Unresolved AND assignee in (currentUser()) order by status, id DESC"
+          :filename "REVUP")
+    ; (:jql " project IN (EX, AHU) and createdDate < '2019-01-01' order by created DESC "
+    ;       :limit 10
+    ;       :filename "last-years-work")
+    ; (:jql " project IN (EX, AHU) and createdDate >= '2019-01-01' order by created DESC "
+    ;       :limit 10
+    ;       :filename "this-years-work")
+    ; (:jql "
+; project IN (EX, AHU)
+; and status IN ('To Do', 'In Development')
+; AND (labels = EMPTY or labels NOT IN ('FutureUpdate'))
+; order by priority, created DESC "
+    ;       :limit 20
+    ;       :filename "ex-ahu-priority-items")
+    ))
