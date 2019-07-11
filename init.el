@@ -55,6 +55,7 @@
        ;;(format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
+       ;;objed             ; text object editing for the innocent
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
@@ -64,13 +65,13 @@
          ;;+ranger         ; bringing the goodness of ranger to dired
          ;;+icons          ; colorful icons for dired-mode
          )
-       ; ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
-       ; hideshow          ; basic code-folding support
-       imenu             ; an imenu sidebar and searchable code index
-       ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
+
+       :term
+       ;;eshell            ; a consistent, cross-platform shell (WIP)
+       ;;term              ; terminals in Emacs
+       ;;vterm             ; another terminals in Emacs
 
        :tools
        ;;ansible
@@ -90,7 +91,7 @@
        ;;macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
-       ;;password-store    ; password manager for nerds
+       ;;pass              ; password manager for nerds
        pdf               ; pdf enhancements
        prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
@@ -98,7 +99,6 @@
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
-       ;;vterm             ; another terminals in Emacs
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -115,7 +115,8 @@
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
-       go                ; the hipster dialect
+       ;;fsharp           ; ML stands for Microsoft's Language
+       ;;go                ; the hipster dialect
        ;;(haskell +intero) ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
@@ -131,13 +132,17 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
-         +attach          ; custom attachment system
-         +babel           ; running code in org
-         +capture         ; org-capture in and outside of Emacs
-         +export          ; Exporting org to whatever you want
-         ; +habit           ; Keep track of your habits
-         +present         ; Emacs for presentations
-         +protocol)       ; Support for org-protocol:// links
+        ; +dragndrop       ; file drag & drop support
+        +ipython         ; ipython support for babel
+        +pandoc          ; pandoc integration into org's exporter
+        +present)        ; using Emacs for presentations
+         ; +attach          ; custom attachment system
+         ; +babel           ; running code in org
+         ; +capture         ; org-capture in and outside of Emacs
+         ; +export          ; Exporting org to whatever you want
+         ; ; +habit           ; Keep track of your habits
+         ; +present         ; Emacs for presentations
+         ; +protocol)       ; Support for org-protocol:// links
        ;;perl              ; write code no one else can comprehend
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
@@ -146,10 +151,10 @@
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        rest              ; Emacs as a REST client
-       ;;ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+       ;;ruby              ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
-       (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
+       sh                ; she sells {ba,z,fi}sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
@@ -192,6 +197,4 @@
        :private
        org-jira
        csv-to-table
-       ; (dizzee +offlineimap)
        )
-
