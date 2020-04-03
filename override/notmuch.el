@@ -29,7 +29,8 @@
                                   ("authors" . "%-20s ")
                                   ("tags" . "(%s) ")
                                   ("subject" . "%s"))
-   notmuch-saved-searches '(("inbox" . "tag:inbox date:today_-_one_month.. -tag:workerterminated")
+   notmuch-saved-searches '(("decluttered inbox" . "tag:inbox date:today_-_one_month.. -tag:workerterminated -tag:alerts")
+			    ("inbox" . "tag:inbox date:today_-_one_month.. -tag:workerterminated")
                             ("unread" . "tag:inbox AND tag:unread")
                             ("alerts" . "tag:alerts")))
 
@@ -337,7 +338,6 @@
  ;  (add-hook 'notmuch-tree-hook evil-notmuch-global-mode)
  ;  )
 
-
  (evil-ex-define-cmd "notmuch-subkeymap-help" 'notmuch-subkeymap-help)
  (evil-ex-define-cmd "notmuch-help" 'notmuch-help)
 
@@ -351,7 +351,4 @@
  (evil-ex-define-cmd "nms" 'evil-nms)
  (evil-ex-define-cmd "nmc" 'notmuch-mua-new-mail)
  (evil-ex-define-cmd "nm" 'notmuch)
-
-
- )
-
+)
