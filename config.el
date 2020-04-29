@@ -17,8 +17,16 @@
 
 (setq scroll-margin 3
       tab-width 4
+      confirm-emacs-kill nil
+      doom-leader-key "\\"
+      doom-localleader-key "\\m"
       user-full-name "Dominic LoBue"
-      user-mail-address "dominic.lobue@gmail.com")
+      user-mail-address "dominic.lobue@gmail.com"
+      ; doom-font (font-spec :family "Source Code Pro" :size 12 :weight 'semi-light)
+      doom-font (font-spec :family "Source Code Pro")
+      doom-variable-pitch-font (font-spec :family "Source Code Pro")
+      doom-unicode-font (font-spec :family "Source Code Pro")
+      doom-big-font (font-spec :family "Source Code Pro"))
 
 ;(setq frame-background-mode "dark")
 ;(disable-theme 'zenburn)
