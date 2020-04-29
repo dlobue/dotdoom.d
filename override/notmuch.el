@@ -29,9 +29,9 @@
                                   ("authors" . "%-20s ")
                                   ("tags" . "(%s) ")
                                   ("subject" . "%s"))
-   notmuch-saved-searches '(("decluttered inbox" . "tag:inbox date:today_-_one_month.. -tag:workerterminated -tag:alerts")
-			    ("inbox" . "tag:inbox date:today_-_one_month.. -tag:workerterminated")
+   notmuch-saved-searches '(("inbox" . "tag:inbox date:today_-_one_month..")
                             ("unread" . "tag:inbox AND tag:unread")
+                            ("security" . "tag:security")
                             ("alerts" . "tag:alerts")))
 
 
