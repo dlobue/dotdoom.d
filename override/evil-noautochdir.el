@@ -28,6 +28,7 @@
   (if (file-directory-p dir)
       (progn
         (setq evil-cwd (expand-file-name dir))
+        (setq default-directory evil-cwd)
         (message evil-cwd))
     (error "Can't find directory %s in path" dir)))
 (evil-ex-define-cmd "cd" 'evil-cd)
@@ -37,5 +38,7 @@
   (interactive)
   (message evil-cwd))
 (evil-ex-define-cmd "pwd" 'evil-pwd)
+
+(add-hook 'find-file-hook (lambda () (setq default-directory evil-cwd)))
 
 (provide 'evil-noautochdir)
