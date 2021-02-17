@@ -32,7 +32,7 @@
    notmuch-saved-searches '(("inbox" . "tag:inbox date:today_-_one_month..")
                             ("unread" . "tag:inbox AND tag:unread")
                             ("security" . "tag:security")
-                            ("alerts" . "tag:alerts")))
+                            ("alerts" . "tag:alerts date:today_-_one_week..")))
 
 
  (add-hook 'notmuch-show-hook
