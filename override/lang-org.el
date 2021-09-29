@@ -8,3 +8,5 @@
       ;; elegant.
       ; org-bullets-bullet-list '("#")
       )
+
+(setf evil-org-key-theme '(textobjects insert navigation additional shift todo heading))
