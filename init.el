@@ -7,6 +7,17 @@
 ;;
 ;; More information about these modules (and what flags they support) can be
 ;; found in modules/README.org.
+;;
+;; NOTE Press 'SPC h d h' (or 'C-h d h' for non-vim users) to access Doom's
+;;      documentation. There you'll find a "Module Index" link where you'll find
+;;      a comprehensive list of Doom's modules and what flags they support.
+
+;; NOTE Move your cursor over a module's name (or its flags) and press 'K' (or
+;;      'C-c c k' for non-vim users) to view its documentation. This works on
+;;      flags as well (those symbols that start with a plus).
+;;
+;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
+;;      directory (for easy access to its source code).
 
 (doom! :input
        ;;chinese
@@ -21,6 +32,7 @@
        ;;ido               ; the other *other* search engine...
        ;;(ivy              ; a search engine for love and life
        ;; +fuzzy)          ; enable fuzzy search backend for ivy
+       ;; vertico           ; the search engine of the future
 
        :ui
        deft              ; notational velocity for Emacs
@@ -28,7 +40,6 @@
        ; doom-dashboard    ; a nifty splash screen for Emacs
        ; doom-modeline     ; a snazzy Atom-inspired mode-line
        ; doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       ; evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        ;;fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
@@ -75,14 +86,15 @@
          )
        electric          ; smarter, keyword-based electric-indent
        ibuffer           ; interactive buffer management
-       undo              ; persistent, smarter undo for your inevitable mistakes
+       (undo              ; persistent, smarter undo for your inevitable mistakes
+         +tree)
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
        ;;eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
-       vterm             ; the best terminal emulation in Emacs
+       ; vterm             ; the best terminal emulation in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -90,11 +102,11 @@
        grammar           ; tasing grammar mistake every you make
 
        :tools
-       ansible
+       ;;ansible
        (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
-       direnv
-       docker
-       ; editorconfig      ; let someone else argue about tabs vs spaces
+       ;;direnv
+       ;;docker
+       ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ; flycheck          ; tasing you for every semicolon you forget
@@ -111,7 +123,7 @@
        prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
-       terraform         ; infrastructure as code
+       ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
@@ -130,6 +142,7 @@
        ;;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
+       ;;dhall
        ;;elixir            ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
@@ -152,9 +165,8 @@
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
        ;;latex             ; writing papers in Emacs has never been so fun
-       ;;lean
-       ;;factor
-       ;;ledger            ; an accounting system in Emacs
+       ;;lean              ; for folks with too much to prove
+       ;;ledger            ; be audit you can be
        ;;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
@@ -185,7 +197,7 @@
        ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ; (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
-       ;;scheme            ; a fully conniving family of lisps
+       ;;(scheme +guile)   ; a fully conniving family of lisps
        sh                ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
@@ -193,9 +205,10 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
        ;;yaml              ; JSON, but readable
+       ;;zig               ; C, but simpler
 
        :email
-       ;;(email +gmail)    ; emacs as an email client
+       ;;(mu4e +org +gmail)
        ;;(mu4e +gmail)       ; WIP
        notmuch
        ;;(wanderlust +gmail) ; WIP
@@ -205,6 +218,7 @@
        ;; should be loaded late.
        :app
        ;;calendar
+       ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader

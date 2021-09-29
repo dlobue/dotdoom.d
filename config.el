@@ -3,7 +3,7 @@
 
 (when (file-exists-p doom-private-override-dir)
   (message "Loading personal configuration files in %s..." doom-private-override-dir)
-  (mapc 'load (directory-files doom-private-override-dir 't "^[^#].*el$")))
+  (mapc 'load (directory-files doom-private-override-dir 't "^[^#].*elc?$")))
 
 (add-to-list 'default-frame-alist '(height . 40))
 (add-to-list 'default-frame-alist '(width . 140))
@@ -17,6 +17,7 @@
 
 (setq scroll-margin 3
       tab-width 4
+      package-native-compile t
       confirm-emacs-kill nil
       doom-leader-key "\\"
       doom-localleader-key "\\m"
