@@ -245,6 +245,6 @@
        (default +bindings +snippets +evil-commands +smartparens)
 
        :private
-       org-jira
+       ; org-jira
        csv-to-table
        )
