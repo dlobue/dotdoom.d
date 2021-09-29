@@ -25,18 +25,20 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       company          ; the ultimate code completion backend
+       (company          ; the ultimate code completion backend
+         +childframe
+       )
        ; +auto            ; as-you-type code completion
-       (helm             ; the *other* search engine for love and life
-         +fuzzy)          ; enable fuzzy search backend for helm
+       ; (helm             ; the *other* search engine for love and life
+       ;   +fuzzy)          ; enable fuzzy search backend for helm
        ;;ido               ; the other *other* search engine...
        ;;(ivy              ; a search engine for love and life
        ;; +fuzzy)          ; enable fuzzy search backend for ivy
-       ;; vertico           ; the search engine of the future
+       vertico           ; the search engine of the future
 
        :ui
        deft              ; notational velocity for Emacs
-       ;doom              ; what makes DOOM look the way it does
+       doom              ; what makes DOOM look the way it does
        ; doom-dashboard    ; a nifty splash screen for Emacs
        ; doom-modeline     ; a snazzy Atom-inspired mode-line
        ; doom-quit         ; DOOM quit-message prompts when you quit Emacs

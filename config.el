@@ -37,4 +37,5 @@
 ;; (set-face-attribute 'default nil :height 140)
 ;(load-theme 'black-mustang t) ;; gvim theme
 ;(load-theme 'noctilux t) ;; lighttable theme
-(load-theme 'bubbleberry t) ;; lighttable theme
+
+; (load-theme 'bubbleberry t) ;; lighttable theme
