@@ -21,6 +21,7 @@
       confirm-emacs-kill nil
       doom-leader-key "\\"
       doom-localleader-key "\\m"
+      company-idle-delay nil
       user-full-name "Dominic LoBue"
       user-mail-address "dominic.lobue@gmail.com"
       ; doom-font (font-spec :family "Source Code Pro" :size 12 :weight 'semi-light)
