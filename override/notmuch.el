@@ -21,8 +21,25 @@
 
 (after! notmuch
 
+ (set-popup-rule! "^\\*notmuch" :ignore t)
+ ; (setq-hook! 'notmuch-search-mode-hook display-buffer-alist nil)
+ ; (remove-hook 'notmuch-show-mode-hook #'+notmuch|center-window)
+ ; (set-popup-rule! (lambda (buf-name action)
+ ;                    (string= "notmuch-show-mode" (with-current-buffer buf-name major-mode))) :ignore t)
+
+  (set-popup-rule! "^\\*subject:" :size 0.8 :ttl 0)
+  (defadvice! +notmuch-search-show-thread-a (fn &rest args)
+              :around #'notmuch-search-show-thread
+              (letf! (defun notmuch-show (thread-id &optional elide-toggle parent-buffer query-context buffer-name)
+                       (funcall notmuch-show
+                                thread-id elide-toggle parent-buffer query-context
+                                (format "*subject:%s*" (substring buffer-name 1 -1))))
+                     (apply fn args)))
+
+
  (setq
    +notmuch-sync-backend nil
+   notmuch-tree-show-out t  ; hopefully prevents showing emails in split pane
    notmuch-message-headers-visible t
    notmuch-search-oldest-first nil
    notmuch-search-result-format '(("date" . "%12s ")
@@ -55,8 +72,6 @@
                       (notmuch-tag-format-image-data tag (notmuch-tag-star-icon)))))
              ))
 
-
- (remove-hook 'notmuch-show-mode-hook #'+notmuch|center-window)
 
 
  (define-key notmuch-tree-mode-map [mouse-1] nil)
