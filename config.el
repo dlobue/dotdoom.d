@@ -19,6 +19,8 @@
       tab-width 4
       package-native-compile t
       confirm-emacs-kill nil
+      ;; don't update the clipboard unless I do so specifically
+      select-enable-clipboard nil
       doom-leader-key "\\"
       doom-localleader-key "\\m"
       company-idle-delay nil
