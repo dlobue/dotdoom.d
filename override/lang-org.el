@@ -1,5 +1,5 @@
 ;; lang/org
-(setq org-directory (expand-file-name "~/docs/notes/org/")
+(setq org-directory (expand-file-name "~/docs/notes/")
       org-agenda-files (list org-directory)
       org-ellipsis " ▼ "
 
@@ -9,4 +9,4 @@
       ; org-bullets-bullet-list '("#")
       )
 
-(setf evil-org-key-theme '(textobjects insert navigation additional shift todo heading))
+; (setf evil-org-key-theme '(textobjects insert navigation additional shift todo heading))
