@@ -90,7 +90,7 @@
 
  (evil-define-command evil-nms (&optional query) (interactive "<a>") (notmuch-search query))
 
- (evil-ex-define-cmd "nms" 'evil-nms)
- (evil-ex-define-cmd "nmc" 'notmuch-mua-new-mail)
- (evil-ex-define-cmd "nm" 'notmuch)
+ ;; (evil-ex-define-cmd "nms" 'evil-nms)
+ ;; (evil-ex-define-cmd "nmc" 'notmuch-mua-new-mail)
+ ;; (evil-ex-define-cmd "nm" 'notmuch)
 )
