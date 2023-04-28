@@ -37,7 +37,7 @@
        vertico           ; the search engine of the future
 
        :ui
-       deft              ; notational velocity for Emacs
+       ; deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        ; doom-dashboard    ; a nifty splash screen for Emacs
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
@@ -55,10 +55,10 @@
          +all             ; catch all popups that start with an asterix
          +hacks
          +defaults)       ; default popup rules
-       ;; tabs              ; a tab bar for Emacs
+       ;;tabs              ; a tab bar for Emacs
        treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
-       vc-gutter         ; vcs diff in the fringe
+       (vc-gutter +pretty) ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
        ;; workspaces        ; tab emulation, persistence & separate workspaces
@@ -97,8 +97,8 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       spell             ; tasing you for misspelling mispelling
-       grammar           ; tasing grammar mistake every you make
+       (spell +aspell) ; tasing you for misspelling mispelling
+       ;;grammar           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
@@ -118,12 +118,13 @@
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        pass              ; password manager for nerds
-       ;; pdf               ; pdf enhancements
+       pdf               ; pdf enhancements
        prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
+       tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
@@ -232,5 +233,5 @@
 
        :private
        ; org-jira
-       csv-to-table
+       ; csv-to-table
        )
