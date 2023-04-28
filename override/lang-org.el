@@ -1,5 +1,5 @@
 ;; lang/org
-(setq org-directory (expand-file-name "~/docs/notes/")
+(setq ;; org-directory (expand-file-name "~/docs/notes/")
       org-agenda-files (list org-directory)
       org-ellipsis " ▼ "
 
