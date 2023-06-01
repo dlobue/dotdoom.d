@@ -25,12 +25,12 @@
       doom-localleader-key "\\m"
       company-idle-delay nil
       user-full-name "Dominic LoBue"
-      user-mail-address "dominic.lobue@gmail.com"
+      user-mail-address "dominicl@sentinelone.com"
       ; doom-font (font-spec :family "Source Code Pro" :size 12 :weight 'semi-light)
-      doom-font (font-spec :family "Source Code Pro")
-      doom-variable-pitch-font (font-spec :family "Source Code Pro")
-      doom-unicode-font (font-spec :family "Source Code Pro")
-      doom-big-font (font-spec :family "Source Code Pro"))
+      doom-font (font-spec :size 14 :family "Source Code Pro")
+      doom-variable-pitch-font (font-spec :size 14 :family "Source Code Pro")
+      doom-unicode-font (font-spec :size 14 :family "Source Code Pro")
+      doom-big-font (font-spec :size 14 :family "Source Code Pro"))
 
 ;; (setq frame-background-mode "dark")
 ;; (disable-theme 'zenburn)
@@ -74,7 +74,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/docs/notes/")
+(setq org-directory "~/notes/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an

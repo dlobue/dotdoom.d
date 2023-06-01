@@ -5,7 +5,7 @@
 
 (setq message-send-mail-function 'message-send-mail-with-sendmail)
 ;(setq mm-text-html-renderer 'gnus-w3m)
-(setq sendmail-program "/usr/bin/msmtp")
+(setq sendmail-program "/usr/local/bin/msmtp")
 
 ;; This is needed to allow msmtp to do its magic:
 (setq message-sendmail-f-is-evil 't)
