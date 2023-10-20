@@ -26,8 +26,8 @@
 
        :completion
        (company          ; the ultimate code completion backend
-         +childframe
-       )
+         +childframe)
+
        ; +auto            ; as-you-type code completion
        ; (helm             ; the *other* search engine for love and life
        ;   +fuzzy)          ; enable fuzzy search backend for helm
@@ -79,10 +79,10 @@
        ;;word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       (dired            ; making dired pretty [functional]
+       (dired)            ; making dired pretty [functional]
          ;;+ranger         ; bringing the goodness of ranger to dired
          ;;+icons          ; colorful icons for dired-mode
-         )
+
        electric          ; smarter, keyword-based electric-indent
        ibuffer           ; interactive buffer management
        (undo              ; persistent, smarter undo for your inevitable mistakes
@@ -118,7 +118,7 @@
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        pass              ; password manager for nerds
-       pdf               ; pdf enhancements
+       ;; pdf               ; pdf enhancements
        prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
@@ -135,8 +135,8 @@
        ;;agda              ; types of types of types of types...
        ;;beancount         ; mind the GAAP
        ;;(cc +lsp)         ; C > C++ == 1
-       ;;clojure           ; java with a lisp
-       ;;common-lisp       ; if you've seen one lisp, you've seen them all
+       (clojure +lsp +treesitter)           ; java with a lisp
+       common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
        ;;csharp            ; unity, .NET, and mono shenanigans
@@ -231,7 +231,7 @@
        ;; reference for your own modules.
        (default +bindings +snippets +evil-commands +smartparens)
 
-       :private
+       :private)
        ; org-jira
        ; csv-to-table
-       )
+       
